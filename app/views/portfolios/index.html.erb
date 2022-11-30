@@ -1,3 +1,5 @@
+<p><%= notice %></p>
+
 <h1>Portfolio items</h1>
 
 <%= link_to "Create new Portfolio", new_portfolio_path %>
@@ -7,7 +9,11 @@
   <p><%= portfolio.subtitle %></p>
   <%= image_tag portfolio.thumbnile_image if !portfolio.thumbnile_image.nil? %>
   <p><%= portfolio.body %></p>
-  <%= link_to "Show this article", portfolio_path(portfolio) %>
+  <%= link_to "Show this Portfolio", portfolio_path(portfolio) %>
   <span> |||| </span>
   <%= link_to "Edit this Portfolio", edit_portfolio_path(portfolio) %>
+  <span> |||| </span>
+  <span style="display: inline-block;">
+    <%= button_to "Delete this Portfolio", portfolio_path(portfolio), method: :delete, data: { confirm: "Are you sure"} %>
+  </span>
 <% end %>
