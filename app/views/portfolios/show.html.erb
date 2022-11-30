@@ -1,0 +1,15 @@
+<h1>Portfolio show page</h1>
+
+<hr />
+
+<%= image_tag @portfolio.main_image if !@portfolio.main_image.nil? %>
+<h2><%= @portfolio.title %></h2>
+<em><%= @portfolio.subtitle %></em>
+<p><%= @portfolio.body %></p>
+
+<%= link_to "Back Portfolios", portfolios_path %> <span> |||| </span>
+<%= link_to "Edit", edit_portfolio_path(@portfolio) %>
+<span> |||| </span>
+<span style="display: inline-block;">
+  <%= button_to "Delete", portfolio_path(@portfolio), method: :delete %>
+</span>
