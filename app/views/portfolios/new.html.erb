@@ -1,0 +1,19 @@
+<h1>Create a new Portfolio item</h1>
+
+<%= form_for(@portfolio) do |f| %>
+  <div>
+    <%= f.label :title, style: "display: block;" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :subtitle, style: "display: block;" %>
+    <%= f.text_field :subtitle %>
+  </div>
+  <div>
+    <%= f.label :body, style: "display: block;" %>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.submit style: "margin-top: 10px;" %>
+  </div>
+<% end %>

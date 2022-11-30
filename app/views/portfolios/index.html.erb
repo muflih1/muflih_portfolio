@@ -3,6 +3,6 @@
 <% @portfolios.each do |portfolio| %>
   <p><%= portfolio.title %></p>
   <p><%= portfolio.subtitle %></p>
-  <p><%= image_tag portfolio.thumbnile_image %></p>
+  <%= image_tag portfolio.thumbnile_image if !portfolio.thumbnile_image.nil? %>
   <p><%= portfolio.body %></p>
 <% end %>
